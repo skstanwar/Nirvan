@@ -1,0 +1,214 @@
+# Saving the user's HTML content into an HTML file.
+html_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirvan - Psychological Conversations</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f6f0; /* Light cream color to match the background of the logo */
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #f5f9fc;
+            color: #333;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        header img {
+            max-width: 250px;
+            height: auto;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #6c2ea5; /* Purple tone from logo */
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #e94560; /* Red tone from logo */
+        }
+        .cta-button {
+            background-color: #e94560; /* Red tone from logo */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background-color: #d73655; /* Darker red for hover */
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #6c2ea5; /* Purple tone from logo */
+        }
+
+        /* Doctor Card Styles */
+        .doctor-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: left;
+        }
+        .doctor-card h3 {
+            margin-top: 0;
+            color: #6c2ea5;
+        }
+        .doctor-card p {
+            margin: 5px 0;
+            color: #333;
+        }
+        .book-btn {
+            background-color: #e94560;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .book-btn:hover {
+            background-color: #d73655;
+        }
+
+        /* Form Styles */
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button[type="submit"] {
+            background-color: #e94560;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button[type="submit"]:hover {
+            background-color: #d73655;
+        }
+        p {
+            font-size: 1em;
+        }
+        a {
+            color: #6c2ea5; /* Purple tone for links */
+            text-decoration: none;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #6c2ea5; /* Purple tone */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #e94560; /* Red tone for footer links */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Adding the logo to the header -->
+        <img src="/mnt/data/image.png" alt="Nirvan Logo"> 
+        <h1>Nirvan</h1>
+        <p>nirvana shivam shambhu</p>
+        <a href="#signup" class="cta-button">Sign Up</a>
+    </header>
+
+    <section id="doctors">
+        <h2>Our Psychiatrists</h2>
+
+        <!-- Doctor 1 -->
+        <div class="doctor-card">
+            <h3>Dr. Ravi Verma</h3>
+            <p><strong>Location:</strong> Mumbai</p>
+            <p><strong>Fee:</strong> ₹1000 per session</p>
+            <p><strong>Experience:</strong> 10 years in Clinical Psychology</p>
+            <p><strong>Specialization:</strong> Stress Management, Cognitive Behavioral Therapy (CBT)</p>
+            <p><strong>Contact:</strong> +91 987654321</p>
+            <button class="book-btn">Book a Session</button>
+        </div>
+
+        <!-- Doctor 2 -->
+        <div class="doctor-card">
+            <h3>Dr. Priya Singh</h3>
+            <p><strong>Location:</strong> Delhi</p>
+            <p><strong>Fee:</strong> ₹1200 per session</p>
+            <p><strong>Experience:</strong> 8 years in Psychiatry</p>
+            <p><strong>Specialization:</strong> Depression, Anxiety Disorders, Psychotherapy</p>
+            <p><strong>Contact:</strong> +91 9876543211</p>
+            <button class="book-btn">Book a Session</button>
+        </div>
+
+        <!-- Doctor 3 -->
+        <div class="doctor-card">
+            <h3>Dr. Aman Mehta</h3>
+            <p><strong>Location:</strong> Bangalore</p>
+            <p><strong>Fee:</strong> ₹1500 per session</p>
+            <p><strong>Experience:</strong> 12 years in Psychological Counseling</p>
+            <p><strong>Specialization:</strong> Addiction Therapy, Relationship Counseling</p>
+            <p><strong>Contact:</strong> +91 9876543212</p>
+            <button class="book-btn">Book a Session</button>
+        </div>
+
+    </section>
+
+    <section id="login-signup">
+        <h2>Login or Sign Up</h2>
+        <form action="/login" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+    </section>
+
+    <footer>
+        <p>© 2024 Nirvan. All rights reserved. Find us on <a href="#">Facebook</a>, <a href="#">Instagram</a></p>
+    </footer>
+</body>
+</html>
+"""
+
+# Saving the HTML content into a file
+file_path = '/mnt/data/nirvan_website.html'
+with open(file_path, 'w') as file:
+    file.write(html_content)
+
+file_path
