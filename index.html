@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindCare Psychological Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#services" onclick="showSection('services')">Services</a></li>
+            <li><a href="#about" onclick="showSection('about')">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <h1>Welcome to MindCare</h1>
+            <p>Your partner in mental wellness, providing personalized and professional support to help you overcome challenges.</p>
+            
+            <!-- Hospital Awards -->
+            <div class="awards">
+                <h2>Awards & Achievements</h2>
+                <p>Recognized as the Best Psychological Care Hospital of 2023, MindCare has received multiple accolades for excellence in patient care and innovation in mental health services.</p>
+            </div>
+        
+            <!-- Doctors Profiles -->
+            <div class="doctors">
+                <h2>Our Expert Team</h2>
+                <div class="doctor">
+                    <h3>Dr. A. Sharma</h3>
+                    <p>Senior Psychiatrist with 15 years of experience.</p>
+                </div>
+                <div class="doctor">
+                    <h3>Dr. R. Gupta</h3>
+                    <p>Clinical Psychologist specializing in cognitive therapy.</p>
+                </div>
+                <div class="doctor">
+                    <h3>Dr. L. Mehta</h3>
+                    <p>Child Psychologist with a focus on developmental disorders.</p>
+                </div>
+            </div>
+        
+            <!-- Departments List -->
+            <div class="departments">
+                <h2>Departments</h2>
+                <ul>
+                    <li>Psychiatry</li>
+                    <li>Clinical Psychology</li>
+                    <li>Child Psychology</li>
+                    <li>Behavioral Therapy</li>
+                </ul>
+            </div>
+        
+            <!-- Automation Services -->
+            <div class="services-list">
+                <h2>Automation Services</h2>
+                <ul>
+                    <li>Online Appointment Booking</li>
+                    <li>Automated Patient Follow-Ups</li>
+                    <li>Medication Reminders</li>
+                </ul>
+            </div>
+        
+            <!-- Hospital Gallery -->
+            <div class="gallery">
+                <h2>Hospital Gallery</h2>
+                <div class="gallery-images">
+                    <img src="hospital1.jpg" alt="Hospital Image 1">
+                    <img src="hospital2.jpg" alt="Hospital Image 2">
+                    <img src="hospital3.jpg" alt="Hospital Image 3">
+                </div>
+            </div>
+        
+            <!-- Book Appointment Button -->
+            <div class="appointment">
+                <button onclick="openAppointmentForm()">Book Appointment</button>
+            </div>
+        
+            <!-- Appointment Form -->
+            <div id="appointmentForm" class="appointment-form">
+                <h2>Book an Appointment</h2>
+                <form>
+                    <label for="patientName">Patient Name:</label>
+                    <input type="text" id="patientName" required>
+        
+                    <label for="doctorName">Select Doctor:</label>
+                    <select id="doctorName">
+                        <option value="Dr. A. Sharma">Dr. A. Sharma</option>
+                        <option value="Dr. R. Gupta">Dr. R. Gupta</option>
+                        <option value="Dr. L. Mehta">Dr. L. Mehta</option>
+                    </select>
+        
+                    <label for="department">Select Department:</label>
+                    <select id="department">
+                        <option value="Psychiatry">Psychiatry</option>
+                        <option value="Clinical Psychology">Clinical Psychology</option>
+                        <option value="Child Psychology">Child Psychology</option>
+                    </select>
+        
+                    <button type="submit">Submit</button>
+                    <button type="button" onclick="closeAppointmentForm()">Cancel</button>
+                </form>
+            </div>
+        </section>
+        
+
+       
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <h2>Our Services</h2>
+            <p>Explore our range of services, including individual therapy, group sessions, couples counseling, and online support.</p>
+        
+            <!-- Services List -->
+            <div class="services-list">
+                <div class="service-item">
+                    <span class="icon">🦻</span>
+                    <h3>Ear, Nose & Throat</h3>
+                </div>
+                <div class="service-item">
+                    <span class="icon">🦠</span>
+                    <h3>Gastroenterology</h3>
+                </div>
+                <div class="service-item">
+                    <span class="icon">🦴</span>
+                    <h3>Joint Replacement</h3>
+                </div>
+                <div class="service-item">
+                    <span class="icon">🧠</span>
+                    <h3>Neurosurgery & Neurology</h3>
+                </div>
+                <div class="service-item">
+                    <span class="icon">👃</span>
+                    <h3>Plastic Surgery</h3>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>Our licensed therapists are committed to helping individuals achieve mental well-being. Learn more about our approach and mission.</p>
+        
+            <!-- Hospital Information and History -->
+            <div class="about-info">
+                <h3>Our History & Awards</h3>
+                <p>Founded in 1995, MindCare Hospital has a rich legacy of providing quality mental healthcare. Over the years, we have received numerous awards, including "Best Mental Health Institution 2023" for excellence in patient care and innovation.</p>
+            </div>
+        
+            <!-- Doctor Profiles -->
+            <div class="doctors">
+                <h3>Our Doctors</h3>
+                <div class="doctor-profile">
+                    <h4>Dr. Rohit</h4>
+                    <p>Ph.D. in Psychiatry, Head Specialist with 20 years of experience.</p>
+                </div>
+                <div class="doctor-profile">
+                    <h4>Dr. Neha Gupta</h4>
+                    <p>M.D. in Neurology, Specialist in neurological disorders with 15 years of experience.</p>
+                </div>
+                <div class="doctor-profile">
+                    <h4>Dr. Aman Verma</h4>
+                    <p>M.B.B.S, Psychologist specializing in cognitive therapy with 10 years of experience.</p>
+                </div>
+            </div>
+        
+            <!-- Partner Hospitals -->
+            <div class="collaborations">
+                <h3>Our Collaborative Hospitals</h3>
+                <ul>
+                    <li>Mani Hospital</li>
+                    <li>Raj Hospital</li>
+                    <li>Bindu Hospital</li>
+                </ul>
+            </div>
+        </section>
+        
+       
+
+    </div>
+   
+    
+    <!-- <a href="https://wa.me/919876543210" class="whatsapp-chatbot" target="_blank">Chat with us</a> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
